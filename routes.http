@@ -1,19 +1,19 @@
-POST http://localhost:3333/videos
+POST https://node-do-zero-tgrl.onrender.com/videos
 Content-Type: application/json
 
 {
-  "title": "video node",
-  "description": "Esse é o primeiro video",
+  "title": "teste 01",
+  "description": "Conteudo",
   "duration": 180
 }
 
 ###
 
-GET http://localhost:3333/videos
+GET https://node-do-zero-tgrl.onrender.com/videos
 
 ###
 
-PUT http://localhost:3333/videos/7c4633a5-4170-4ee2-a27a-95a67ad44f18
+PUT https://node-do-zero-tgrl.onrender.com/videos/7c4633a5-4170-4ee2-a27a-95a67ad44f18
 Content-Type: application/json
 
 {
@@ -24,4 +24,4 @@ Content-Type: application/json
 
 ###
 
-DELETE http://localhost:3333/videos/7c4633a5-4170-4ee2-a27a-95a67ad44f18
+DELETE https://node-do-zero-tgrl.onrender.com/videos/7c4633a5-4170-4ee2-a27a-95a67ad44f18

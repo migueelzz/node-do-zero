@@ -10,8 +10,11 @@ server.register(cors, {
 
 const database = new DatabasePostgres()
 
-server.get('/', () => {
-  return 'Hello Miguel'
+server.get('/', (request, reply) => {
+  const data = {
+    title: 'Hello Miguel',
+  }
+  return reply.send(data)
 })
 
 server.post('/videos', async (request, reply) => {
@@ -28,12 +31,12 @@ server.post('/videos', async (request, reply) => {
   return reply.status(201).send()
 })
 
-server.get('/videos', async (request) => {
+server.get('/videos', async (request, reply) => {
   const search = request.query.search
 
   const videos = await database.list(search)
 
-  return videos
+  return reply.send(videos)
 })
 
 server.put('/videos/:id', async (request, reply) => {
