@@ -1,0 +1,27 @@
+POST http://localhost:3333/videos
+Content-Type: application/json
+
+{
+  "title": "video node",
+  "description": "Esse é o primeiro video",
+  "duration": 180
+}
+
+###
+
+GET http://localhost:3333/videos
+
+###
+
+PUT http://localhost:3333/videos/7c4633a5-4170-4ee2-a27a-95a67ad44f18
+Content-Type: application/json
+
+{
+  "title": "Aula node-do-zero",
+  "description": "testando postgres",
+  "duration": 180
+}
+
+###
+
+DELETE http://localhost:3333/videos/7c4633a5-4170-4ee2-a27a-95a67ad44f18
